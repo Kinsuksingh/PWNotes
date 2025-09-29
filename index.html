@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
@@ -112,13 +119,13 @@
       </div>
     </section>
 
-    <section class="chapter">
+    <section class="chapter1">
       <h4 class="text-start ml-3 mr-4 mt-5">
         Iss chapter mein humein <strong>4 life processes</strong> detail mein
         padhne hain:
       </h4>
 
-      <div class="d-flex flex-column ">
+      <div class="d-flex flex-column">
         <!-- Nutrition -->
         <div class="lp-card d-flex flex-row ml-3 mr-3">
           <img width="100px" src="assets/3.png" alt="Nutrition" />
@@ -128,10 +135,10 @@
           </div>
         </div>
 
-        <div class="d-flex flex-row align-items-center m-3">
+        <div class="d-flex flex-row align-items-center">
           <div>
             <!-- Respiration -->
-            <div class="lp-card d-flex flex-column align-items-center mb-3">
+            <div class="lp-card d-flex flex-column align-items-center mt-3 ml-3 mb-3">
               <img width="100px" src="assets/4.png" alt="Transportation" />
               <div class="card-body">
                 <h4>Respiration</h4>
@@ -140,7 +147,7 @@
             </div>
 
             <!-- Transportation -->
-            <div class="lp-card d-flex flex-column align-items-center">
+            <div class="lp-card d-flex flex-column align-items-center ml-3 mb-3">
               <img width="100px" src="assets/5.png" alt="Transportation" />
               <div class="card-body">
                 <h4>Transportation</h4>
@@ -152,15 +159,34 @@
             </div>
           </div>
           <!-- Teacher / Host image -->
-          <div class="host">
-            <div class="audio-clip">
-              <!-- adutio clip path:"asset/Audio-made" -->
-              <img class="ml-5" id="host-stiker" src="assets/32.png" alt="mic-Stiker" />
-            </div>
-            <img class="host-teacher" src="assets/28.png" alt="Teacher" />
-            
+
+
+
+
+          <div class="host audio-clip  ml-5 d-flex flex-column align-items-end">
+              <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+              <audio id="myAudio">
+                <source src="assets/audio.m4a" type="audio/mp4" />
+              </audio>
           </div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Excretion -->
         <div class="lp-card d-flex flex-row ml-3 mb-5 mr-3">
           <img width="100px" src="assets/6.png" alt="Excretion" />
@@ -174,5 +200,6 @@
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>

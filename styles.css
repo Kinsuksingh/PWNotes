@@ -280,21 +280,26 @@ p {
 
 
 
+.chapter1 {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  max-width: 500px;
+}
 
 
 
 
 /* Host image on the right with soft circle */
 
-.host img{
-  position: relative;
-  width: 50%;
-  height: auto;
+.host{
+  background-image: url('assets/28.png');
+  background-size: cover;
+  height:350px;
 }
 
-#host-stiker{
+.host img{
   position: relative;
-  width: 30%;
+  width: 70%;
   height: auto;
 }
 
@@ -322,3 +327,26 @@ p {
   color: #313131;
 }
 
+
+
+
+
+
+.audio-clip button {
+  background-image:url('assets/32.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-image 0.3s ease;
+  margin-right: 150px;
+}
+
+.audio-clip button:hover {
+  opacity: 0.2;
+}
