@@ -1,0 +1,324 @@
+:root{
+  --purple-header: #3D2B7C;   /* dark header purple */
+  --purple-accent: #5146A6;   /* subheading/bracket purple */
+  --text-body:    #4B4B4B;    /* body paragraph gray */
+  --text-dark:    #2E2E2E;    /* general dark text */
+  --white:        #FFFFFF;
+  --purple: #3D2B7C;          /* headings */
+  --text:   #242424;          /* body */
+  --muted:  #616161;          /* arrows */
+  --cardBorder: #f0cfd7;      /* soft pink border */
+  --cardBg: #fff;
+  --lav: #f7f3ff;             /* subtle lavender for back shapes if needed */
+}
+
+
+
+
+
+
+/* Chapter Header */
+
+.chapter {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  max-width: 500px;
+}
+
+
+.chapter-header {
+  background-color: var(--purple-header);
+  color: var(--white);     /* dark purple */
+  padding: 25px 20px 15px 50px;
+  border-radius: 0px 0px 6px 6px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading text */
+.chapter-header h2 {
+  color: var(--white);
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  z-index: 1;                      /* keep above pattern */
+  text-shadow: 2px 2px 6px rgba(0,0,0,23);  /* glowing shadow */
+}
+
+/* Subheadings */
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: var(--purple-accent);
+}
+
+/* Paragraphs */
+p {
+  font-size: 15px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--text-body);
+}
+
+.box{
+  border-right: 4px solid var(--purple-accent);
+  border-bottom: 4px solid var(--purple-accent);
+  border-radius: 0 30px 10px 0px;
+  margin-right: 20px;
+}
+.content-box {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-size: 120px;
+  line-height: 1.5;
+  color: #111;
+}
+
+.img {
+  max-width: 50%;    
+  height: auto;    
+  
+}
+
+
+
+/* Container */
+.life-process {
+  margin-right: 20px;
+  margin-top: 20px;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Header styling */
+.lp-header {
+  background-color: #e6dcf5;  /* light lavender background */
+  padding: 10px 15px;
+}
+
+.lp-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #3d2b7c;   /* dark purple */
+}
+
+/* Content text */
+.lp-content {
+  padding: 12px 15px;
+}
+
+.lp-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2e2e2e;
+  margin: 0;
+}
+
+/* Highlighted bold parts */
+.highlight {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Extra strong emphasis */
+.bold {
+  font-weight: 700;
+  color: #111;
+}
+
+
+
+
+
+/* Layout */
+.essential-vs-fun{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 28px;
+  align-items: start;
+  max-width: 700px;
+}
+
+.evf-item p{
+  margin: 0 0 10px;
+  font: 400 14px/1.55 'Poppins', Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Circular thumbnail with overlays */
+.thumb{
+  position: relative;
+  width: 150px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+  justify-self: center;
+}
+
+.thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Bottom-right status badges */
+.badge{
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--white);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--white);
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.badge-x{
+  background: radial-gradient(circle at 35% 35%, #ea4f5eff 0 40%, var(--red) 41% 100%);
+}
+.badge-check{
+  background: radial-gradient(circle at 35% 35%, #12b84cff 0 40%, var(--green) 41% 100%);
+}
+
+/* Dotted arc around the left thumbnail */
+.thumb.dotted::before{
+  content: "";
+  position: absolute;
+  inset: -5px;              /* sits slightly outside the circle */
+  border-radius: 50%;
+  border: 2px dashed #a59f9fff;
+  /* show only the upper-left arc */
+  clip-path: polygon(0 0, 50% 0, 50% 50%, 100% 90%, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+
+
+
+/* Quote box */
+.quote-box {
+  position: relative;
+  background-color: #f7f3ff;   /* soft lavender */
+  padding: 18px 28px;
+  border-radius: 8px;
+  max-width: 650px;
+  margin: 20px auto;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2d246b;              /* dark purple text */
+  text-align: left;
+}
+
+/* Quotation marks */
+.quote-icon {
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+  color: #3d2b7c;              /* deep purple */
+  opacity: 0.8;                /* slightly lighter effect */
+}
+
+.quote-icon.left {
+  top: 6px;
+  left: 10px;
+}
+
+.quote-icon.right {
+  bottom: 3px;
+  right: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Host image on the right with soft circle */
+
+.host img{
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+
+#host-stiker{
+  position: relative;
+  width: 30%;
+  height: auto;
+}
+
+
+/* ---------- Card ---------- */
+.lp-card{
+  background: var(--cardBg);
+  border: 2px solid var(--cardBorder);
+  border-radius: 14px;
+  padding: 5px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  position: relative;
+}
+
+.card-body h4{
+  margin: 0 0 4px;
+  color: var(--purple);
+  font-size: 15px;
+  font-weight: 700;
+}
+.card-body p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #313131;
+}
+
